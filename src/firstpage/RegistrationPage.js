@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const RegistrationPage = ({ setLoggedIn }) => {
   const [usernameRegistration, setUsernameRegistration] = useState("");
@@ -6,54 +7,77 @@ const RegistrationPage = ({ setLoggedIn }) => {
   const [passwordRegistration, setPasswordRegistration] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const sendRegistration = (e) => {
-    // TODO api hivas
-    setLoggedIn(true); // ezt az API hivas alapjan fogjuk beallitani
-    e.preventDefault();
+  const sendRegistration = async (event) => {
+    event.preventDefault();
+
+    const response = await axios
+      .post(`/api/register`, {
+        username: usernameRegistration,
+        password: passwordRegistration,
+        emailAddress: emailAddress,
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+    setLoggedIn(response.data);
   };
 
   return (
-    <div>
-      <h1> REGISRATION </h1>
-      <form onSubmit={sendRegistration}>
-        <label>
-          Username:
-          <input
-            type="text"
-            name="username"
-            value={usernameRegistration}
-            onChange={(e) => setUsernameRegistration(e.target.value)}
-          />
-        </label>
-        <label>
-          Email address:
-          <input
-            type="text"
-            name="email"
-            value={emailAddress}
-            onChange={(e) => setEmailAddress(e.target.value)}
-          />
-        </label>
-        <label>
-          Password:
-          <input
-            type="text"
-            name="passwordRegistration"
-            value={passwordRegistration}
-            onChange={(e) => setPasswordRegistration(e.target.value)}
-          />
-        </label>
-        <label>
-          Confirm Password:
-          <input
-            type="text"
-            name="email"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </label>
-        <input type="submit" />
-      </form>
+    <div className="row">
+      <div className="col-3">
+        <h3> REGISTRATION </h3>
+        <form onSubmit={sendRegistration}>
+          <div>
+            <label>
+              Username:
+              <input
+                type="text"
+                name="username"
+                value={usernameRegistration}
+                placeholder="Type in your username"
+                required
+                onChange={(e) => setUsernameRegistration(e.target.value)}
+              />
+            </label>
+          </div>
+
+          <label>
+            Email address:
+            <input
+              type="text"
+              name="email"
+              value={emailAddress}
+              placeholder="Type in your email address"
+              required
+              onChange={(e) => setEmailAddress(e.target.value)}
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              type="text"
+              name="passwordRegistration"
+              value={passwordRegistration}
+              placeholder="Type in your password"
+              required
+              onChange={(e) => setPasswordRegistration(e.target.value)}
+            />
+          </label>
+          <label>
+            Confirm password:
+            <input
+              type="text"
+              name="email"
+              value={confirmPassword}
+              placeholder="Once more..."
+              required
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </label>
+          <input type="submit" className="regbutton" />
+        </form>
+      </div>
     </div>
   );
 };

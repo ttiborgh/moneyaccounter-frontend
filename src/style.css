@@ -77,3 +77,16 @@ h6 {
   display: flex;
   background-color: aqua;
 }
+
+.regbutton {
+  margin-top: 10px;
+}
+
+.piggy {
+  margin-left: 150px;
+  width: 450px;
+}
+
+.regfields {
+  margin-left: 50px;
+}
