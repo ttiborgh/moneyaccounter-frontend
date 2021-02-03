@@ -4,14 +4,15 @@ import Accountant from "./accountancy/Accountant";
 import LoginRegistrationScreen from "./firstpage/LoginRegistrationScreen";
 
 const App = () => {
+  const [userId, setUserId] = useState(0);
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <div>
       {loggedIn ? (
-        <Accountant />
+        <Accountant userId={userId} setUserId={setUserId} />
       ) : (
-        <LoginRegistrationScreen setLoggedIn={setLoggedIn} />
+        <LoginRegistrationScreen setLoggedIn={setLoggedIn} setUserId={setUserId} />
       )}
     </div>
   );

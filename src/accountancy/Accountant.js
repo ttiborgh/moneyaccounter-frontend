@@ -3,22 +3,9 @@ import Balance from "./Balance";
 import InputArea from "./InputArea";
 import EntryList from "./EntryList";
 
-const Accountant = () => {
+const Accountant = ({ userId, setUserId }) => {
   const [balance, setBalance] = useState(1000);
-  const [entries, setEntries] = useState([
-    {
-      id: 1,
-      spending: "false",
-      amount: 1500,
-      description: "Hab' Geld auf der Straße gefunden.",
-    },
-    {
-      id: 2,
-      spending: "true",
-      amount: 500,
-      description: "Socken gekauft.",
-    },
-  ]);
+  const [entries, setEntries] = useState([]);
 
   return (
     <div>
@@ -30,6 +17,8 @@ const Accountant = () => {
             setBalance={setBalance}
             entries={entries}
             setEntries={setEntries}
+            setUserId={setUserId}
+            userId={userId}
           ></InputArea>
           <Balance balance={balance}></Balance>
         </div>
