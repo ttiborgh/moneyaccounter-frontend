@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const LoginForm = ({ setLoggedIn }) => {
+const LoginForm = ({ setLoggedIn, setUserId }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,9 +14,10 @@ const LoginForm = ({ setLoggedIn }) => {
         .catch(function (error) {
           console.log(error);
         });
+      setUserId(response.data.id);
       setLoggedIn(response.data);
-    } catch (e) {
-      console.log(error.status)
+    } catch (error) {
+      console.log(error.status);
     }
   };
 
@@ -30,7 +31,7 @@ const LoginForm = ({ setLoggedIn }) => {
             <input
               type="text"
               name="username"
-              placeholder="Type in username"
+              placeholder="Type in your username"
               onChange={(e) => setUsername(e.target.value)}
             />
           </label>
