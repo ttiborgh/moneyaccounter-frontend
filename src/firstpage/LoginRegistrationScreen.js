@@ -7,7 +7,7 @@ const LoginRegistrationScreen = ({ setLoggedIn, setUserId }) => {
   return (
     <div className="row">
       <div className="col-4 regfields">
-        <RegistrationPage setLoggedIn={setLoggedIn} />
+        <RegistrationPage setLoggedIn={setLoggedIn} setUserId={setUserId} />
         <br />
         <LoginForm setLoggedIn={setLoggedIn} setUserId={setUserId} />
       </div>

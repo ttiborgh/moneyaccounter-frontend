@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const RegistrationPage = ({ setLoggedIn }) => {
+const RegistrationPage = ({ setLoggedIn, setUserId }) => {
   const [usernameRegistration, setUsernameRegistration] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [passwordRegistration, setPasswordRegistration] = useState("");
@@ -19,7 +19,7 @@ const RegistrationPage = ({ setLoggedIn }) => {
       .catch(function (error) {
         console.log(error);
       });
-
+    setUserId(response.data.id);
     setLoggedIn(response.data);
   };
 

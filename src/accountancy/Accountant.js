@@ -4,7 +4,7 @@ import InputArea from "./InputArea";
 import EntryList from "./EntryList";
 
 const Accountant = ({ userId, setUserId }) => {
-  const [balance, setBalance] = useState(1000);
+  const [balance, setBalance] = useState(0);
   const [entries, setEntries] = useState([]);
 
   return (
