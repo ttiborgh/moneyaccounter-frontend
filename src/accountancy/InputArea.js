@@ -10,7 +10,6 @@ const InputArea = ({ setBalance, entries, setEntries, userId }) => {
     const response = await axios.get(`/api/records/${userId}`);
     const responseUser = await axios.get(`/api/user/${userId}`);
     setEntries(response.data);
-    console.log(responseUser);
     setBalance(responseUser.data.balance);
   };
 

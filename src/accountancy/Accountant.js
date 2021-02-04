@@ -26,6 +26,7 @@ const Accountant = ({ userId, setUserId }) => {
           entries={entries}
           balance={balance}
           userId={userId}
+          setEntries={setEntries}
           setBalance={setBalance}
         ></EntryList>
       </div>

@@ -1,10 +1,13 @@
 import axios from "axios";
 import React from "react";
 
-const EntryList = ({ entries, userId }) => {
+const EntryList = ({ entries, setEntries, setBalance, userId }) => {
   const deleteItem = async (elem) => {
-    const response = await axios.delete(`/api/deleterecord/${elem.id}/${userId}`);
-    console.log(response.status);
+    const response = await axios.delete(
+      `/api/deleterecord/${elem.id}/${userId}`
+    );
+    setEntries(response.data.listOfRecords);
+    setBalance(response.data.balance);
   };
 
   return (
