@@ -76,7 +76,7 @@ const InputArea = ({ setBalance, entries, setEntries, userId }) => {
                 Spending
               </label>
             </div>
-            <button type="submit">Submit entry</button>
+            <button className="subbutton" type="submit">Submit entry</button>
           </div>
         </form>
       </div>

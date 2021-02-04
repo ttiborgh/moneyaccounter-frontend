@@ -19,7 +19,7 @@ const EntryList = ({ entries, setEntries, setBalance, userId }) => {
             <h6 style={{ color: elem.spending ? "red" : "green" }}>
               {elem.amount}
             </h6>
-            <button onClick={() => deleteItem(elem)}>Delete</button>
+            <button className="deletebutton" onClick={() => deleteItem(elem)}>Delete</button>
           </label>
         </div>
       ))}

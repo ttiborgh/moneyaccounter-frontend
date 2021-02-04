@@ -4,15 +4,17 @@ import InputArea from "./InputArea";
 import EntryList from "./EntryList";
 import emojipiggy from "../resources/emojipiggy.png";
 
-const Accountant = ({ userId, setUserId }) => {
+const Accountant = ({ userId, setUserId, setLoggedIn }) => {
   const [balance, setBalance] = useState(0);
   const [entries, setEntries] = useState([]);
 
   return (
     <div>
-      <h5 className="header">
-        YOUR MONEY IS SAFE WITH <img src={emojipiggy} className="emojipiggy"/>
-      </h5>
+      <h6 className="header">
+        PIGGY BANK - Your money is safe with us 
+        <img src={emojipiggy} className="emojipiggy" />
+        <button className="logoffbutton" onClick={() => setLoggedIn(false)}> LOG OFF</button>
+      </h6>
       <div className="container">
         <div className="flex">
           <InputArea

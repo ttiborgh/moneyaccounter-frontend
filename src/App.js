@@ -10,9 +10,16 @@ const App = () => {
   return (
     <div>
       {loggedIn ? (
-        <Accountant userId={userId} setUserId={setUserId} />
+        <Accountant
+          userId={userId}
+          setUserId={setUserId}
+          setLoggedIn={setLoggedIn}
+        />
       ) : (
-        <LoginRegistrationScreen setLoggedIn={setLoggedIn} setUserId={setUserId} />
+        <LoginRegistrationScreen
+          setLoggedIn={setLoggedIn}
+          setUserId={setUserId}
+        />
       )}
     </div>
   );
