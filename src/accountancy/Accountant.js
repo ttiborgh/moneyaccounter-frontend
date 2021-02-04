@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Balance from "./Balance";
 import InputArea from "./InputArea";
 import EntryList from "./EntryList";
+import emojipiggy from "../resources/emojipiggy.png";
 
 const Accountant = ({ userId, setUserId }) => {
   const [balance, setBalance] = useState(0);
@@ -9,7 +10,9 @@ const Accountant = ({ userId, setUserId }) => {
 
   return (
     <div>
-      <h5 className="header"> YOUR PIGGY BANK </h5>
+      <h5 className="header">
+        YOUR MONEY IS SAFE WITH <img src={emojipiggy} className="emojipiggy"/>
+      </h5>
       <div className="container">
         <div className="flex">
           <InputArea

@@ -88,6 +88,22 @@ h6 {
   width: 450px;
 }
 
+.moveArrow {
+  animation-name: mymove;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1s;
+}
+
+@keyframes mymove {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(40px);
+  }
+}
+
 .regfields {
   margin-left: 50px;
 }
@@ -102,4 +118,8 @@ h6 {
   background-color: rgb(180, 180, 180);
   padding: 15px;
   border-radius: 15px;
+}
+
+.emojipiggy {
+    width: 60px;
 }
