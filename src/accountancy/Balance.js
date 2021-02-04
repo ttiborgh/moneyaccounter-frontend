@@ -22,9 +22,9 @@ const Balance = ({ balance }) => {
       </div>
       <br />
       <div className="currencies">
-        <p> {Math.abs((currency?.rates.EUR * balance).toFixed(1))} EUR </p>
-        <p> {Math.abs((currency?.rates.USD * balance).toFixed(1))} USD </p>
-        <p> {Math.abs((currency?.rates.GBP * balance).toFixed(1))} GBP </p>
+        <p> {Math.abs((currency?.rates.EUR * balance).toFixed(2))} EUR </p>
+        <p> {Math.abs((currency?.rates.USD * balance).toFixed(2))} USD </p>
+        <p> {Math.abs((currency?.rates.GBP * balance).toFixed(2))} GBP </p>
       </div>
     </div>
   );
