@@ -10,17 +10,21 @@ const RegistrationPage = ({ setLoggedIn, setUserId }) => {
   const sendRegistration = async (event) => {
     event.preventDefault();
 
-    const response = await axios
-      .post(`/api/register`, {
-        username: usernameRegistration,
-        password: passwordRegistration,
-        emailAddress: emailAddress,
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    setUserId(response.data.id);
-    setLoggedIn(response.data);
+    try {
+      const response = await axios
+        .post(`/api/register`, {
+          username: usernameRegistration,
+          password: passwordRegistration,
+          emailAddress: emailAddress,
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      setUserId(response.data.id);
+      setLoggedIn(response.data);
+    } catch (e) {
+      console.log("CONFLICT");
+    }
   };
 
   return (
@@ -56,7 +60,7 @@ const RegistrationPage = ({ setLoggedIn, setUserId }) => {
           <label>
             Password:
             <input
-              type="text"
+              type="password"
               name="passwordRegistration"
               value={passwordRegistration}
               placeholder="Type in your password"
@@ -67,7 +71,7 @@ const RegistrationPage = ({ setLoggedIn, setUserId }) => {
           <label>
             Confirm password:
             <input
-              type="text"
+              type="password"
               name="email"
               value={confirmPassword}
               placeholder="Once more..."

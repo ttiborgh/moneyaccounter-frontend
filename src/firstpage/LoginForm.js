@@ -39,7 +39,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
           <label>
             Password:
             <input
-              type="text"
+              type="password"
               name="password"
               placeholder="Type in your password"
               onChange={(e) => setPassword(e.target.value)}

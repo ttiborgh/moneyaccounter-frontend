@@ -16,10 +16,10 @@ const EntryList = ({ entries, setEntries, setBalance, userId }) => {
         <div className="tabs list" key={elem.id}>
           <h6> {elem.description} </h6>
           <label className="flex">
-            <h6 style={{ color: elem.spending === "true" ? "red" : "green" }}>
+            <h6 style={{ color: elem.spending ? "red" : "green" }}>
               {elem.amount}
             </h6>
-            <button onClick={() => deleteItem(elem)}>Löschen</button>
+            <button onClick={() => deleteItem(elem)}>Delete</button>
           </label>
         </div>
       ))}
