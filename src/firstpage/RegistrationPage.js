@@ -15,7 +15,7 @@ const RegistrationPage = ({ setLoggedIn, setUserId }) => {
         .post(`/api/register`, {
           username: usernameRegistration,
           password: passwordRegistration,
-          emailAddress: emailAddress,
+          email: emailAddress,
         })
         .catch(function (error) {
           console.log(error);
