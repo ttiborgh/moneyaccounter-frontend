@@ -12,17 +12,21 @@ const EntryList = ({ entries, setEntries, setBalance, userId }) => {
 
   return (
     <>
-      {entries.map((elem) => (
-        <div className="tabs list" key={elem.id}>
-          <h6> {elem.description} </h6>
-          <label className="flex">
-            <h6 style={{ color: elem.spending ? "red" : "green" }}>
-              {elem.amount}
-            </h6>
-            <button className="deletebutton" onClick={() => deleteItem(elem)}>Delete</button>
-          </label>
-        </div>
-      ))}
+      {entries
+        .map((elem) => (
+          <div className="tabs list" key={elem.id}>
+            <h6> {elem.description} </h6>
+            <label className="flex">
+              <h6 style={{ color: elem.spending ? "red" : "green" }}>
+                {elem.amount}
+              </h6>
+              <button className="deletebutton" onClick={() => deleteItem(elem)}>
+                Delete
+              </button>
+            </label>
+          </div>
+        ))
+        .reverse()}
     </>
   );
 };
