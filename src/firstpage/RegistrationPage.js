@@ -24,7 +24,7 @@ const RegistrationPage = ({ setLoggedIn, setUserId }) => {
   };
 
   return (
-    <div className="row">
+    <div className="row registrationpanel">
       <div className="col-3">
         <h3> REGISTRATION </h3>
         <form onSubmit={sendRegistration}>

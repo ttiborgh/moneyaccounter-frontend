@@ -1,32 +1,25 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React from "react";
 
-const EntryList = ({ entries, balance, setBalance }) => {
-  const [deletedItems, setDeletedItems] = useState([]);
-
-  const deleteItem = (elem) => {
-    setDeletedItems([...deletedItems, elem.id]);
-    setBalance(
-      elem.spending === "true"
-        ? balance + parseInt(elem.amount)
-        : balance - parseInt(elem.amount)
-    );
+const EntryList = ({ entries, userId }) => {
+  const deleteItem = async (elem) => {
+    const response = await axios.delete(`/api/deleterecord/${elem.id}/${userId}`);
+    console.log(response.status);
   };
 
   return (
     <>
-      {entries
-        ?.filter((elem) => !deletedItems.includes(elem.id))
-        .map((elem) => (
-          <div className="tabs list" key={elem.id}>
-            <h6> {elem.description} </h6>
-            <label className="flex">
-              <h6 style={{ color: elem.spending === "true" ? "red" : "green" }}>
-                {elem.amount}
-              </h6>
-              <button onClick={() => deleteItem(elem)}>Löschen</button>
-            </label>
-          </div>
-        ))}
+      {entries.map((elem) => (
+        <div className="tabs list" key={elem.id}>
+          <h6> {elem.description} </h6>
+          <label className="flex">
+            <h6 style={{ color: elem.spending === "true" ? "red" : "green" }}>
+              {elem.amount}
+            </h6>
+            <button onClick={() => deleteItem(elem)}>Löschen</button>
+          </label>
+        </div>
+      ))}
     </>
   );
 };

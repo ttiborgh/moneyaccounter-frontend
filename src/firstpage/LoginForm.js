@@ -22,7 +22,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
   };
 
   return (
-    <div className="row">
+    <div className="row loginpanel">
       <h3> LOGIN </h3>
       <div className="col-3">
         <form onSubmit={sendLoginRequest}>
@@ -33,6 +33,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
               name="username"
               placeholder="Type in your username"
               onChange={(e) => setUsername(e.target.value)}
+              required
             />
           </label>
           <label>
@@ -42,6 +43,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
               name="password"
               placeholder="Type in your password"
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </label>
           <input type="submit" className="regbutton" />

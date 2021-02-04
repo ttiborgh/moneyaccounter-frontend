@@ -1,5 +1,5 @@
 body {
-  margin: 100px;
+  margin: 30px 100px 100px 100px;
   background-color: rgb(230, 228, 228);
   display: flex;
   justify-content: center;
@@ -83,10 +83,23 @@ h6 {
 }
 
 .piggy {
+  margin-top: 60px;
   margin-left: 150px;
   width: 450px;
 }
 
 .regfields {
   margin-left: 50px;
+}
+
+.registrationpanel {
+  background-color: rgb(180, 180, 180);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.loginpanel {
+  background-color: rgb(180, 180, 180);
+  padding: 15px;
+  border-radius: 15px;
 }

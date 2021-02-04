@@ -9,7 +9,7 @@ const Accountant = ({ userId, setUserId }) => {
 
   return (
     <div>
-      <h5 className="header"> REGISZTRACIO, LOGIN, ROUTING, SPRING </h5>
+      <h5 className="header"> YOUR PIGGY BANK </h5>
       <div className="container">
         <div className="flex">
           <InputArea
@@ -25,6 +25,7 @@ const Accountant = ({ userId, setUserId }) => {
         <EntryList
           entries={entries}
           balance={balance}
+          userId={userId}
           setBalance={setBalance}
         ></EntryList>
       </div>

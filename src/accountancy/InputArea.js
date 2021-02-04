@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const InputArea = ({ balance, setBalance, entries, setEntries, userId }) => {
+const InputArea = ({ setBalance, entries, setEntries, userId }) => {
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
   const [spending, setSpending] = useState("");
-
-  useEffect(() => {
-    fetchFreshEntriesAndNewBalance();
-  }, []);
 
   const fetchFreshEntriesAndNewBalance = async () => {
     const response = await axios.get(`/api/records/${userId}`);
     const responseUser = await axios.get(`/api/user/${userId}`);
     setEntries(response.data);
+    console.log(responseUser);
     setBalance(responseUser.data.balance);
   };
+
+  useEffect(() => {
+    fetchFreshEntriesAndNewBalance();
+  }, []);
 
   const sendNewEntry = async (newEntry) => {
     const response = await axios.post(`/api/record/${userId}`, newEntry);
@@ -31,6 +32,7 @@ const InputArea = ({ balance, setBalance, entries, setEntries, userId }) => {
     };
 
     sendNewEntry(newEntry);
+
     setTimeout(() => {
       fetchFreshEntriesAndNewBalance();
     }, 500);
