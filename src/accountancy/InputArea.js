@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const InputArea = ({ setBalance, entries, setEntries, userId }) => {
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
   const [spending, setSpending] = useState("");
+  const { t } = useTranslation();
 
   const fetchFreshEntriesAndNewBalance = async () => {
     const response = await axios.get(`/api/records/${userId}`);
@@ -50,7 +52,7 @@ const InputArea = ({ setBalance, entries, setEntries, userId }) => {
           <div>
             <input
               type="text"
-              placeholder="Describe your transaction"
+              placeholder={t("transactionDescription")}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
@@ -76,7 +78,9 @@ const InputArea = ({ setBalance, entries, setEntries, userId }) => {
                 Spending
               </label>
             </div>
-            <button className="subbutton" type="submit">Submit entry</button>
+            <button className="subbutton" type="submit">
+              Submit entry
+            </button>
           </div>
         </form>
       </div>
