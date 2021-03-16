@@ -46,7 +46,7 @@ const InputArea = ({ setBalance, entries, setEntries, userId }) => {
 
   return (
     <div className="tabs">
-      <h2> New entry </h2>
+      <h2> {t("newEntryTitle")} </h2>
       <div className="flex">
         <form onSubmit={uploadEntry}>
           <div>
@@ -60,7 +60,7 @@ const InputArea = ({ setBalance, entries, setEntries, userId }) => {
           <div>
             <input
               type="number"
-              placeholder="Amount"
+              placeholder={t("amount")}
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               required
@@ -71,15 +71,15 @@ const InputArea = ({ setBalance, entries, setEntries, userId }) => {
             >
               <label>
                 <input type="radio" value={false} name="spending" required />
-                Income
+                {t("income")}
               </label>
               <label>
                 <input type="radio" value={true} name="spending" required />
-                Spending
+                {t("spending")}
               </label>
             </div>
             <button className="subbutton" type="submit">
-              Submit entry
+            {t("submitEntry")}
             </button>
           </div>
         </form>

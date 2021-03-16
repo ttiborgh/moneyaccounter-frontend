@@ -4,20 +4,21 @@ import InputArea from "./InputArea";
 import EntryList from "./EntryList";
 import emojipiggy from "../resources/emojipiggy.png";
 import SwitchLanguage from "../SwitchLanguage";
+import { useTranslation } from "react-i18next";
 
 const Accountant = ({ userId, setUserId, setLoggedIn }) => {
   const [balance, setBalance] = useState(0);
   const [entries, setEntries] = useState([]);
+  const { t } = useTranslation();
 
   return (
     <div>
       <SwitchLanguage />
       <h6 className="header">
-        PIGGY BANK - Your money is safe with us
+        {t("piggybankTitle")}
         <img src={emojipiggy} className="emojipiggy" alt="piggy" />
         <button className="logoffbutton" onClick={() => setLoggedIn(false)}>
-          {" "}
-          LOG OFF
+          {t("logoff")}
         </button>
       </h6>
       <div className="container">

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const Balance = ({ balance }) => {
   const [currency, setCurrency] = useState();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetch = async () => {
@@ -16,7 +18,7 @@ const Balance = ({ balance }) => {
 
   return (
     <div className="tabs">
-      <h2> Saldo </h2>
+      <h2> {t("saldo")} </h2>
       <div className="saldo" style={{ color: balance > 0 ? "green" : "red" }}>
         {Math.abs(balance)} HUF
       </div>

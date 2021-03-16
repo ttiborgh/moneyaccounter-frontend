@@ -1,7 +1,9 @@
 import axios from "axios";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const EntryList = ({ entries, setEntries, setBalance, userId }) => {
+  const {t} = useTranslation();
   const deleteItem = async (elem) => {
     const response = await axios.delete(
       `/api/deleterecord/${elem.id}/${userId}`
@@ -21,7 +23,7 @@ const EntryList = ({ entries, setEntries, setBalance, userId }) => {
                 {elem.amount}
               </h6>
               <button className="deletebutton" onClick={() => deleteItem(elem)}>
-                Delete
+              {t("delete")}
               </button>
             </label>
           </div>
