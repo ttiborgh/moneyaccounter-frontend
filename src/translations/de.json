@@ -1,3 +1,12 @@
 {
-    "transactionDescription": "Beschreibung der Transaktion"
+    "transactionDescription": "Beschreibung der Transaktion",
+    "newEntryTitle": "Neuer Eintrag",
+    "amount": "Betrag",
+    "income": "Einkommen",
+    "spending": "Ausgabe",
+    "submitEntry": "Einsenden",
+    "saldo": "Saldo",
+    "piggybankTitle": "Sparschwein, dein Geld ist bei uns sicher!",
+    "logoff": "Abmelden",
+    "delete": "Löschen"
 }

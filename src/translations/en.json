@@ -1,3 +1,12 @@
 {
-    "transactionDescription": "Description of the transaction"
+    "transactionDescription": "Description of the transaction",
+    "newEntryTitle": "New entry",
+    "amount": "Amount",
+    "income": "Income",
+    "spending": "Spending",
+    "submitEntry": "Submit entry",
+    "saldo": "Amount",
+    "piggybankTitle": "Piggy Bank, your money is safe with us!",
+    "logoff": "Log out",
+    "delete": "Delete"
 }
