@@ -3,7 +3,6 @@ import Balance from "./Balance";
 import InputArea from "./InputArea";
 import EntryList from "./EntryList";
 import emojipiggy from "../resources/emojipiggy.png";
-import SwitchLanguage from "../SwitchLanguage";
 import { useTranslation } from "react-i18next";
 
 const Accountant = ({ userId, setUserId, setLoggedIn }) => {
@@ -13,7 +12,6 @@ const Accountant = ({ userId, setUserId, setLoggedIn }) => {
 
   return (
     <div>
-      <SwitchLanguage />
       <h6 className="header">
         {t("piggybankTitle")}
         <img src={emojipiggy} className="emojipiggy" alt="piggy" />
