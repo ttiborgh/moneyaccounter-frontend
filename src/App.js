@@ -10,6 +10,7 @@ const App = () => {
 
   return (
     <div>
+      <Header />
       {loggedIn ? (
         <Accountant
           userId={userId}
