@@ -8,5 +8,11 @@
     "saldo": "Saldo",
     "piggybankTitle": "Sparschwein, dein Geld ist bei uns sicher!",
     "logoff": "Abmelden",
-    "delete": "Löschen"
+    "delete": "Löschen",
+    "loginTitle": "Anmeldung",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "submitLogin": "Anmelden",
+    "typeUsername": "Benutzername eingeben",
+    "typePassword": "Password eingeben"
 }

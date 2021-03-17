@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const LoginForm = ({ setLoggedIn, setUserId }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const { t } = useTranslation();
 
   const sendLoginRequest = async (event) => {
     event.preventDefault();
@@ -23,30 +25,32 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
 
   return (
     <div className="row loginpanel">
-      <h3> LOGIN </h3>
+      <h3> {t("loginTitle")} </h3>
       <div className="col-3">
         <form onSubmit={sendLoginRequest}>
           <label>
-            Username:
+            {t("username")}
             <input
               type="text"
               name="username"
-              placeholder="Type in your username"
+              placeholder={t("typeUsername")} 
               onChange={(e) => setUsername(e.target.value)}
               required
             />
           </label>
           <label>
-            Password:
+            {t("password")}
             <input
               type="password"
               name="password"
-              placeholder="Type in your password"
+              placeholder={t("typePassword")}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </label>
-          <input type="submit" className="regbutton" />
+          <button type="submit" className="regbutton">
+            {t("submitLogin")}
+          </button>
         </form>
       </div>
     </div>

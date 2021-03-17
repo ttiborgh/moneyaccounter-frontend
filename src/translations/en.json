@@ -8,5 +8,11 @@
     "saldo": "Amount",
     "piggybankTitle": "Piggy Bank, your money is safe with us!",
     "logoff": "Log out",
-    "delete": "Delete"
+    "delete": "Delete",
+    "loginTitle": "Login",
+    "username": "Username",
+    "password": "Password",
+    "submitLogin": "Login",
+    "typeUsername": "Type in your username",
+    "typePassword": "Type in your password"
 }

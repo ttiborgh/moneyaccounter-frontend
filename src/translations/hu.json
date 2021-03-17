@@ -8,5 +8,11 @@
     "saldo": "Egyenleg",
     "piggybankTitle": "Malacpersely, a pénzed velünk biztonságban van!",
     "logoff": "Kijelentkezés",
-    "delete": "Törlés"
+    "delete": "Törlés",
+    "loginTitle": "Bejelentkezés",
+    "username": "Felhasználónév",
+    "password": "Jelszó",
+    "submitLogin": "Bejelentkezés",
+    "typeUsername": "Felhasználónév megadása",
+    "typePassword": "Jelszó megadása"
 }
