@@ -12,7 +12,7 @@ const Accountant = ({ userId, setUserId, setLoggedIn }) => {
 
   return (
     <div>
-      <h6 className="header">
+      <h6 className="acc-header">
         {t("piggybankTitle")}
         <img src={emojipiggy} className="emojipiggy" alt="piggy" />
         <button className="logoffbutton" onClick={() => setLoggedIn(false)}>

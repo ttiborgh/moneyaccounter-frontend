@@ -3,7 +3,7 @@ import SwitchLanguage from "./SwitchLanguage";
 
 const Header = () => {
   return (
-    <div className="container-fluid m-0">
+    <div className="container-fluid m-0 header">
       <div className="row">
         <div className="col-10">
           <p>Sparschwein</p>
