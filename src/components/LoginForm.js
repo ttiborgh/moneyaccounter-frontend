@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { ArrowRight } from "react-bootstrap-icons";
 
 const LoginForm = ({ setLoggedIn, setUserId }) => {
   const [username, setUsername] = useState("");
@@ -33,7 +34,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
             <input
               type="text"
               name="username"
-              placeholder={t("typeUsername")} 
+              placeholder={t("typeUsername")}
               onChange={(e) => setUsername(e.target.value)}
               required
             />
@@ -49,6 +50,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
             />
           </label>
           <button type="submit" className="regbutton">
+            <ArrowRight /> 
             {t("submitLogin")}
           </button>
         </form>
