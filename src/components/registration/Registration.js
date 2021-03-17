@@ -1,15 +1,12 @@
 import React from "react";
-import RegistrationPage from "./RegistrationPage";
-import LoginForm from "./LoginForm";
-import logo from "../resources/piggybank.png";
+import RegistrationPage from "./RegistrationForm";
+import logo from "../../resources/piggybank.png";
 
-const LoginRegistrationPage = ({ setLoggedIn, setUserId }) => {
+const Registration = ({ setLoggedIn, setUserId }) => {
   return (
     <div className="row">
       <div className="col-4">
         <RegistrationPage setLoggedIn={setLoggedIn} setUserId={setUserId} />
-        <br />
-        <LoginForm setLoggedIn={setLoggedIn} setUserId={setUserId} />
       </div>
       <div className="col-8">
         <img
@@ -23,4 +20,4 @@ const LoginRegistrationPage = ({ setLoggedIn, setUserId }) => {
   );
 };
 
-export default LoginRegistrationPage;
+export default Registration;

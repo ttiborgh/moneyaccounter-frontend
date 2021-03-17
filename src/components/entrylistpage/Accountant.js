@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Balance from "./Balance";
 import InputArea from "./InputArea";
 import EntryList from "./EntryList";
-import emojipiggy from "../resources/emojipiggy.png";
+import emojipiggy from "../../resources/emojipiggy.png";
 import { useTranslation } from "react-i18next";
 
 const Accountant = ({ userId, setUserId, setLoggedIn }) => {

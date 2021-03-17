@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./style.css";
-import Accountant from "./accountancy/Accountant";
-import LoginRegistrationScreen from "./firstpage/LoginRegistrationPage";
-import Header from "./components/Header"
+import Accountant from "./components/entrylistpage/Accountant";
+import Registration from "./components/registration/Registration";
+import Header from "./components/Header";
 
 const App = () => {
   const [userId, setUserId] = useState(0);
@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <div>
-      <Header />
+      <Header setUserId={setUserId} setLoggedIn={setLoggedIn} />
       {loggedIn ? (
         <Accountant
           userId={userId}
@@ -18,10 +18,7 @@ const App = () => {
           setLoggedIn={setLoggedIn}
         />
       ) : (
-        <LoginRegistrationScreen
-          setLoggedIn={setLoggedIn}
-          setUserId={setUserId}
-        />
+        <Registration setLoggedIn={setLoggedIn} setUserId={setUserId} />
       )}
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const RegistrationPage = ({ setLoggedIn, setUserId }) => {
+const RegistrationForm = ({ setLoggedIn, setUserId }) => {
   const [usernameRegistration, setUsernameRegistration] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [passwordRegistration, setPasswordRegistration] = useState("");
@@ -86,4 +86,4 @@ const RegistrationPage = ({ setLoggedIn, setUserId }) => {
   );
 };
 
-export default RegistrationPage;
+export default RegistrationForm;
