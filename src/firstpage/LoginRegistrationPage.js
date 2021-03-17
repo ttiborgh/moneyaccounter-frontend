@@ -3,7 +3,7 @@ import RegistrationPage from "./RegistrationPage";
 import LoginForm from "./LoginForm";
 import logo from "../resources/piggybank.png";
 
-const LoginRegistrationScreen = ({ setLoggedIn, setUserId }) => {
+const LoginRegistrationPage = ({ setLoggedIn, setUserId }) => {
   return (
     <div className="row">
       <div className="col-4">
@@ -11,7 +11,7 @@ const LoginRegistrationScreen = ({ setLoggedIn, setUserId }) => {
         <br />
         <LoginForm setLoggedIn={setLoggedIn} setUserId={setUserId} />
       </div>
-      <div className="col-7">
+      <div className="col-8">
         <img
           src={logo}
           alt="Mister Pig"
@@ -23,4 +23,4 @@ const LoginRegistrationScreen = ({ setLoggedIn, setUserId }) => {
   );
 };
 
-export default LoginRegistrationScreen;
+export default LoginRegistrationPage;
