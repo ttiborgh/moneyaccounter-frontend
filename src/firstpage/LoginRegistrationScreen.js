@@ -12,7 +12,12 @@ const LoginRegistrationScreen = ({ setLoggedIn, setUserId }) => {
         <LoginForm setLoggedIn={setLoggedIn} setUserId={setUserId} />
       </div>
       <div className="col-7">
-        <img src={logo} alt="Mister Pig" className="piggy moveArrow" />
+        <img
+          src={logo}
+          alt="Mister Pig"
+          className="moveArrow"
+          style={{ width: "450px" }}
+        />
       </div>
     </div>
   );

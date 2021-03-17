@@ -84,12 +84,6 @@ h6 {
   margin-top: 10px;
 }
 
-.piggy {
-  margin-top: 40px;
-  margin-left: 150px;
-  width: 450px;
-}
-
 .moveArrow {
   animation-name: mymove;
   animation-iteration-count: infinite;
