@@ -13,7 +13,7 @@ const SwitchLanguage = () => {
 
   return (
     <select
-      className="form-select m-4"
+      className="form-select my-4"
       value={actualLanguage}
       onChange={handleChange}
     >
