@@ -6,7 +6,7 @@ import logo from "../resources/piggybank.png";
 const LoginRegistrationScreen = ({ setLoggedIn, setUserId }) => {
   return (
     <div className="row">
-      <div className="col-4 regfields">
+      <div className="col-4">
         <RegistrationPage setLoggedIn={setLoggedIn} setUserId={setUserId} />
         <br />
         <LoginForm setLoggedIn={setLoggedIn} setUserId={setUserId} />
