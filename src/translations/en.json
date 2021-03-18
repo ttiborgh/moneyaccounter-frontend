@@ -13,11 +13,11 @@
     "username": "Username",
     "password": "Password",
     "submitLogin": "Login",
-    "typeUsername": "Type in your username",
-    "typePassword": "Type in your password",
-    "typeEmail": "E-mail",
-    "confirmPassword": "Password once more",
+    "typeUsername": "Username",
+    "typePassword": "Password",
+    "typeEmail": "E-mail address",
+    "confirmPassword": "Confirm password",
     "registration": "Register free of charge",
-    "email": "E-mail",
+    "email": "E-mail address",
     "register": "Register"
 }
