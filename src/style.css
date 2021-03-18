@@ -9,7 +9,7 @@ body {
 
 .global-wrapper {
   background-color: #ffffff;
-  min-width: 60vw;
+  width: 70vw;
   padding: 5%;
 }
 
