@@ -18,5 +18,6 @@
     "typeEmail": "E-mail",
     "confirmPassword": "Password once more",
     "registration": "Register free of charge",
-    "email": "E-mail"
+    "email": "E-mail",
+    "register": "Register"
 }

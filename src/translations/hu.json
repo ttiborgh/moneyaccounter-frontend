@@ -6,7 +6,7 @@
     "spending": "Kiadás",
     "submitEntry": "Beküldés",
     "saldo": "Egyenleg",
-    "piggybankTitle": "Malacpersely, a pénzed velünk biztonságban van!",
+    "piggybankTitle": "Malacpersely, a pénzed biztonságban van!",
     "logoff": "Kijelentkezés",
     "delete": "Törlés",
     "loginTitle": "Bejelentkezés",
@@ -18,5 +18,6 @@
     "typeEmail": "E-mail cím",
     "confirmPassword": "Jelszó megismétlése",
     "registration": "Díjtalan regisztráció",
-    "email": "E-mail cím"
+    "email": "E-mail cím",
+    "register": "Regisztrálok"
 }

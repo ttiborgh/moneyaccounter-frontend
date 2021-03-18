@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowRight } from "react-bootstrap-icons";
+import RegLoginButton from "./RegLoginButton";
 
 const LoginForm = ({ setLoggedIn, setUserId }) => {
   const [username, setUsername] = useState("");
@@ -49,10 +49,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
               required
             />
           </label>
-          <button type="submit" className="regbutton">
-            <ArrowRight className="arrow-sign-btn" />
-            {t("submitLogin")}
-          </button>
+          <RegLoginButton buttonText={t("submitLogin")}/>
         </form>
       </div>
     </div>

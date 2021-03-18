@@ -18,5 +18,6 @@
     "typeEmail": "E-mail-Adresse",
     "confirmPassword": "Passwort wiederholen",
     "registration": "Kostenlos registrieren",
-    "email": "E-mail"
+    "email": "E-mail",
+    "register": "Registrieren"
 }

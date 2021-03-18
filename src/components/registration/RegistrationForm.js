@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import RegLoginButton from "../RegLoginButton";
 
 const RegistrationForm = ({ setLoggedIn, setUserId }) => {
   const [usernameRegistration, setUsernameRegistration] = useState("");
@@ -81,7 +82,7 @@ const RegistrationForm = ({ setLoggedIn, setUserId }) => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </label>
-          <input type="submit" className="regbutton" />
+          <RegLoginButton buttonText={t("register")} />
         </form>
       </div>
     </div>
