@@ -9,17 +9,21 @@ const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
-    <div>
-      <Header setUserId={setUserId} setLoggedIn={setLoggedIn} />
-      {loggedIn ? (
-        <Accountant
-          userId={userId}
-          setUserId={setUserId}
-          setLoggedIn={setLoggedIn}
-        />
-      ) : (
-        <Registration setLoggedIn={setLoggedIn} setUserId={setUserId} />
-      )}
+    <div className="global-wrapper">
+      <div>
+        <Header setUserId={setUserId} setLoggedIn={setLoggedIn} />
+      </div>
+      <div>
+        {loggedIn ? (
+          <Accountant
+            userId={userId}
+            setUserId={setUserId}
+            setLoggedIn={setLoggedIn}
+          />
+        ) : (
+          <Registration setLoggedIn={setLoggedIn} setUserId={setUserId} />
+        )}
+      </div>
     </div>
   );
 };
