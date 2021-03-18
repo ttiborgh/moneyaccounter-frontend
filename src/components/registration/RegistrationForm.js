@@ -1,28 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 import RegLoginButton from "../RegLoginButton";
+import { Formik, Form, Field } from "formik";
 
 const RegistrationForm = ({ setLoggedIn, setUserId }) => {
-  const [usernameRegistration, setUsernameRegistration] = useState("");
-  const [emailAddress, setEmailAddress] = useState("");
-  const [passwordRegistration, setPasswordRegistration] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const { t } = useTranslation();
 
-  const sendRegistration = async (event) => {
-    event.preventDefault();
-
+  const sendRegistration = async (value) => {
     try {
-      const response = await axios
-        .post(`/api/register`, {
-          username: usernameRegistration,
-          password: passwordRegistration,
-          email: emailAddress,
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+      const response = await axios.post(`/api/register`, value);
       setUserId(response.data.id);
       setLoggedIn(response.data);
     } catch (e) {
@@ -32,59 +19,45 @@ const RegistrationForm = ({ setLoggedIn, setUserId }) => {
 
   return (
     <div className="row">
-      <div>
-        <h2> {t("registration")} </h2>
-        <form onSubmit={sendRegistration}>
-          <div>
-            <label>
-              {t("username")}
-              <input
-                type="text"
-                name="username"
-                value={usernameRegistration}
-                placeholder={t("typeUsername")}
-                required
-                onChange={(e) => setUsernameRegistration(e.target.value)}
-              />
-            </label>
-          </div>
-
-          <label>
-            {t("email")}
-            <input
-              type="text"
-              name="email"
-              value={emailAddress}
-              placeholder={t("typeEmail")}
-              required
-              onChange={(e) => setEmailAddress(e.target.value)}
-            />
-          </label>
-          <label>
-            {t("password")}
-            <input
-              type="password"
-              name="passwordRegistration"
-              value={passwordRegistration}
-              placeholder={t("typePassword")}
-              required
-              onChange={(e) => setPasswordRegistration(e.target.value)}
-            />
-          </label>
-          <label>
-            {t("confirmPassword")}
-            <input
-              type="password"
-              name="email"
-              value={confirmPassword}
-              placeholder={t("onceMore")}
-              required
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-          </label>
+      <h2> {t("registration")} </h2>
+      <Formik
+        initialValues={{
+          username: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+        }}
+        // validate={}
+        onSubmit={sendRegistration}
+      >
+        <Form>
+          <Field
+            type="text"
+            name="username"
+            placeholder={t("typeUsername")}
+            className="my-2"
+          />
+          <Field
+            type="text"
+            name="email"
+            placeholder={t("typeEmail")}
+            className="my-2"
+          />
+          <Field
+            type="password"
+            name="password"
+            placeholder={t("password")}
+            className="my-2"
+          />
+          <Field
+            type="password"
+            name="confirmPassword"
+            placeholder={t("confirmPassword")}
+            className="my-2"
+          />
           <RegLoginButton buttonText={t("register")} />
-        </form>
-      </div>
+        </Form>
+      </Formik>
     </div>
   );
 };
