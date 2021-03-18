@@ -31,8 +31,8 @@ const RegistrationForm = ({ setLoggedIn, setUserId }) => {
 
   return (
     <div className="row">
-      <div className="col-3">
-        <h3> {t("registration")} </h3>
+      <div>
+        <h2> {t("registration")} </h2>
         <form onSubmit={sendRegistration}>
           <div>
             <label>
