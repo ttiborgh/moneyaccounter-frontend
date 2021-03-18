@@ -58,7 +58,7 @@ const RegistrationForm = ({ setLoggedIn, setUserId }) => {
             placeholder={t("confirmPassword")}
             className="my-2"
           />
-          <RegLoginButton buttonText={t("register")} />
+          <RegLoginButton buttonText={t("register")}  />
         </Form>
       </Formik>
     </>
