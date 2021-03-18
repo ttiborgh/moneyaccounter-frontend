@@ -1,6 +1,5 @@
 import React from "react";
 import RegistrationPage from "./RegistrationForm";
-import logo from "../../resources/piggybank.png";
 
 const Registration = ({ setLoggedIn, setUserId }) => {
   return (
