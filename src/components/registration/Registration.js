@@ -9,12 +9,6 @@ const Registration = ({ setLoggedIn, setUserId }) => {
         <RegistrationPage setLoggedIn={setLoggedIn} setUserId={setUserId} />
       </div>
       <div className="col-8">
-        <img
-          src={logo}
-          alt="Mister Pig"
-          className="moveArrow"
-          style={{ width: "450px" }}
-        />
       </div>
     </div>
   );
