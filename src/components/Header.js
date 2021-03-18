@@ -8,7 +8,7 @@ const Header = ({ setLoggedIn, setUserId }) => {
   return (
     <div className="container-fluid header">
       <div className="row">
-        <div className="col-10"></div>
+        <div className="col-9"></div>
         <div className="col-1 my-2 d-flex">
           <Dropdown drop="down">
             <Dropdown.Toggle variant="none">
@@ -19,7 +19,7 @@ const Header = ({ setLoggedIn, setUserId }) => {
             </Dropdown.Menu>
           </Dropdown>
         </div>
-        <div className="col-1 my-2 d-flex">
+        <div className="col-2 my-2 d-flex">
           <SwitchLanguage />
         </div>
       </div>
