@@ -50,7 +50,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
             />
           </label>
           <button type="submit" className="regbutton">
-            <ArrowRight /> 
+            <ArrowRight className="arrow-sign-btn" />
             {t("submitLogin")}
           </button>
         </form>

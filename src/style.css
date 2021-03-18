@@ -108,7 +108,6 @@ h6 {
 }
 
 .loginpanel {
-
   padding: 15px;
   border-radius: 5px;
 }
@@ -135,8 +134,18 @@ h6 {
 }
 
 .regbutton {
-  display: block;
+  white-space: nowrap;
   text-align: center;
+  margin-top: 15%;
+  padding: 0 15% 0 15%;
   border-radius: 2px;
-  width: 200px;
+  background-color: #e01b22;
+  border-color: #e01b22;
+  color: #ffffff;
+}
+
+.arrow-sign-btn {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
 }
