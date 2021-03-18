@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import RegLoginButton from "./RegLoginButton";
+import RegLoginButton from "../RegLoginButton";
 
 const LoginForm = ({ setLoggedIn, setUserId }) => {
   const [username, setUsername] = useState("");
