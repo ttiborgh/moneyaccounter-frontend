@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./style.css";
 import Accountant from "./components/entrylistpage/Accountant";
-import Registration from "./components/registration/Registration";
 import Header from "./components/Header";
+import OpeningPage from "./components/OpeningPage";
 
 const App = () => {
   const [userId, setUserId] = useState(0);
@@ -21,7 +21,7 @@ const App = () => {
             setLoggedIn={setLoggedIn}
           />
         ) : (
-          <Registration setLoggedIn={setLoggedIn} setUserId={setUserId} />
+          <OpeningPage setLoggedIn={setLoggedIn} setUserId={setUserId} />
         )}
       </div>
     </div>
