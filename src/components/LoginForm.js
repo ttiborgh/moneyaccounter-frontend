@@ -27,7 +27,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
   return (
     <div className="row loginpanel">
       <h3> {t("loginTitle")} </h3>
-      <div className="col-3">
+      <div>
         <form onSubmit={sendLoginRequest}>
           <label>
             {t("username")}
@@ -49,8 +49,8 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
               required
             />
           </label>
-          <RegLoginButton buttonText={t("submitLogin")}/>
         </form>
+        <RegLoginButton buttonText={t("submitLogin")} />
       </div>
     </div>
   );
