@@ -14,5 +14,9 @@
     "password": "Password",
     "submitLogin": "Login",
     "typeUsername": "Type in your username",
-    "typePassword": "Type in your password"
+    "typePassword": "Type in your password",
+    "typeEmail": "E-mail",
+    "confirmPassword": "Password once more",
+    "registration": "Register free of charge",
+    "email": "E-mail"
 }

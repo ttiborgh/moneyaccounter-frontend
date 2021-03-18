@@ -13,6 +13,10 @@
     "username": "Felhasználónév",
     "password": "Jelszó",
     "submitLogin": "Bejelentkezés",
-    "typeUsername": "Felhasználónév megadása",
-    "typePassword": "Jelszó megadása"
+    "typeUsername": "Felhasználónév",
+    "typePassword": "Jelszó",
+    "typeEmail": "E-mail cím",
+    "confirmPassword": "Jelszó megismétlése",
+    "registration": "Díjtalan regisztráció",
+    "email": "E-mail cím"
 }

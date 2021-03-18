@@ -13,6 +13,10 @@
     "username": "Benutzername",
     "password": "Passwort",
     "submitLogin": "Anmelden",
-    "typeUsername": "Benutzername eingeben",
-    "typePassword": "Password eingeben"
+    "typeUsername": "Benutzername",
+    "typePassword": "Passwort",
+    "typeEmail": "E-mail-Adresse",
+    "confirmPassword": "Passwort wiederholen",
+    "registration": "Kostenlos registrieren",
+    "email": "E-mail"
 }
