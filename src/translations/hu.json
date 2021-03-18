@@ -19,5 +19,13 @@
     "confirmPassword": "Jelszó megismétlése",
     "registration": "Díjtalan regisztráció",
     "email": "E-mail cím",
-    "register": "Regisztrálok"
+    "register": "Regisztrálok",
+    "usernameLong": "A felhasználónév legfeljebb 15 karakter hosszúságú lehet.",
+    "usernameShort": "A felhasználónév legalább 6 karakter hosszúságú kell legyen.",
+    "required": "Kötelező mező.",
+    "emailInvalid": "Helytelen e-mail cím formátum.",
+    "passwordShort": "A jelszó legalább 8 karakter hosszúságú kell legyen.",
+    "nonMatchingPassword": "A jelszavaknak meg kell egyezniük.",
+    "passwordNeededLogin": "Add meg a jelszavad.",
+    "usernameNeededLogin": "Add meg a felhasználóneved."
 }

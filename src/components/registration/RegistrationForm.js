@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 import RegLoginButton from "../RegLoginButton";
-import { Formik, Form, Field } from "formik";
-import Schema from "../validations";
+import { Formik, Form } from "formik";
+import validationSchema from "../validations";
 import InputField from "./InputField";
 
 const RegistrationForm = ({ setLoggedIn, setUserId }) => {
@@ -29,7 +29,14 @@ const RegistrationForm = ({ setLoggedIn, setUserId }) => {
           password: "",
           confirmPassword: "",
         }}
-        validationSchema={Schema}
+        validationSchema={validationSchema(
+          t("usernameLong"),
+          t("usernameShort"),
+          t("required"),
+          t("emailInvalid"),
+          t("passwordShort"),
+          t("nonMatchingPassword")
+        )}
         onSubmit={sendRegistration}
       >
         <Form>

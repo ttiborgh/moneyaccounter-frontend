@@ -19,5 +19,13 @@
     "confirmPassword": "Confirm password",
     "registration": "Register free of charge",
     "email": "E-mail address",
-    "register": "Register"
+    "register": "Register",
+    "usernameLong": "Username can be maximum 15 characters.",
+    "usernameShort": "Username must have at lest 6 characters.",
+    "required": "Required field.",
+    "emailInvalid": "Invalid e-mail format.",
+    "passwordShort": "The password must have at least 8 characters.",
+    "nonMatchingPassword": "Non-matching passwords.",
+    "passwordNeededLogin": "Please enter your password.",
+    "usernameNeededLogin": "Please enter your username."
 }
