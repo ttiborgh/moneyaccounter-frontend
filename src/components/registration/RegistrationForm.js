@@ -3,8 +3,8 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 import RegLoginButton from "../RegLoginButton";
 import { Formik, Form } from "formik";
-import validationSchema from "../validations";
-import InputField from "./InputField";
+import registrationValidationSchema from "../../validations.js/registrationValidation";
+import InputField from "../InputField";
 
 const RegistrationForm = ({ setLoggedIn, setUserId }) => {
   const { t } = useTranslation();
@@ -29,7 +29,7 @@ const RegistrationForm = ({ setLoggedIn, setUserId }) => {
           password: "",
           confirmPassword: "",
         }}
-        validationSchema={validationSchema(
+        validationSchema={registrationValidationSchema(
           t("usernameLong"),
           t("usernameShort"),
           t("required"),
@@ -58,7 +58,7 @@ const RegistrationForm = ({ setLoggedIn, setUserId }) => {
             placeholder={t("confirmPassword")}
             className="my-2"
           />
-          <RegLoginButton buttonText={t("register")}  />
+          <RegLoginButton buttonText={t("register")} />
         </Form>
       </Formik>
     </>
