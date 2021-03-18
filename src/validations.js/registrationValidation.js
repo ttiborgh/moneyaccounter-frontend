@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-const validationSchema = (
+const registrationValidationSchema = (
   usernameLong,
   usernameShort,
   required,
@@ -20,4 +20,4 @@ const validationSchema = (
       .required(required),
   });
 
-export default validationSchema;
+export default registrationValidationSchema;
