@@ -13,17 +13,15 @@ const App = () => {
       <div>
         <Header setUserId={setUserId} setLoggedIn={setLoggedIn} />
       </div>
-      <div>
-        {loggedIn ? (
-          <Accountant
-            userId={userId}
-            setUserId={setUserId}
-            setLoggedIn={setLoggedIn}
-          />
-        ) : (
-          <OpeningPage setLoggedIn={setLoggedIn} setUserId={setUserId} />
-        )}
-      </div>
+      {loggedIn ? (
+        <Accountant
+          userId={userId}
+          setUserId={setUserId}
+          setLoggedIn={setLoggedIn}
+        />
+      ) : (
+        <OpeningPage setLoggedIn={setLoggedIn} setUserId={setUserId} />
+      )}
     </div>
   );
 };
