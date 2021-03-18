@@ -22,7 +22,7 @@ const LoginForm = ({ setLoggedIn, setUserId }) => {
   };
 
   return (
-    <div className="row loginpanel">
+    <div className="login-form">
       <h3> {t("loginTitle")} </h3>
       <Formik
         initialValues={{
