@@ -20,8 +20,8 @@ const RegistrationForm = ({ setLoggedIn, setUserId }) => {
   };
 
   return (
-    <div className="mt-3">
-      <h2> {t("registration")} </h2>
+    <>
+      <h3> {t("registration")} </h3>
       <Formik
         initialValues={{
           username: "",
@@ -61,7 +61,7 @@ const RegistrationForm = ({ setLoggedIn, setUserId }) => {
           <RegLoginButton buttonText={t("register")} />
         </Form>
       </Formik>
-    </div>
+    </>
   );
 };
 
