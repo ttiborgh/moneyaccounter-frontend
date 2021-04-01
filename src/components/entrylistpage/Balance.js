@@ -9,12 +9,15 @@ const Balance = ({ balance }) => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "https://api.exchangeratesapi.io/latest?base=HUF"
+        "http://api.exchangeratesapi.io/v1/latest?access_key=ce435b7d26b67a460e0fe6d64fc1d4de&base=EUR&symbols=GBP,USD,HUF"
       );
+      console.log(response.data);
       setCurrency(response.data);
     };
     fetch();
   }, []);
+
+  {/* TODO: Fix currency exchanges, since the API became subscription based*/}
 
   return (
     <div className="tabs">
@@ -24,8 +27,8 @@ const Balance = ({ balance }) => {
       </div>
       <br />
       <div className="currencies">
-        <p> {Math.abs((currency?.rates.EUR * balance).toFixed(2))} EUR </p>
-        <p> {Math.abs((currency?.rates.USD * balance).toFixed(2))} USD </p>
+        <p> {Math.abs(((1 / currency?.rates.HUF) * balance).toFixed(2))} EUR </p>
+        <p> {Math.abs((currency?.rates.USD * balance).toFixed(2))} USD </p>  
         <p> {Math.abs((currency?.rates.GBP * balance).toFixed(2))} GBP </p>
       </div>
     </div>
